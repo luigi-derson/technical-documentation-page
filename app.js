@@ -28,6 +28,7 @@ cross.onclick = function() {
         cross.style.display = '';
         menuLinks.style.display = 'none';
         main.style.display = 'unset';
+        Navbar.style.overflow = 'hidden';
     }
 }
 
@@ -40,8 +41,10 @@ menuLinks.onclick = function() {
         menuLinks.style.display = 'none';
         navbar.style.overflow = 'hidden';
         main.style.display = 'unset';
+        scroll();
     }
 }
+
 
 pythonLogo.onclick = function animateToTop() {
     /* e.preventDefault(); */
@@ -54,5 +57,32 @@ pythonLogo.onclick = function animateToTop() {
         }
     }, 8);
 }
+
+const ajust = () => {
+
+}
+
+const sections = document.getElementsByClassName('main-section');
+
+function scroll() {
+    const scrollToSection = window.setInterval(function() {
+        const pos = window.pageYOffset;
+        for (let i = 0; i < sections.length; i++) {
+            const sectionPos = sections[i].getBoundingClientRect().top - 200;
+            
+            //No peobar esto, se congela
+            // console.log(sectionPos)
+
+            /* if ( pos === sectionPos ) {
+                window.scrollTo( 0, sectionPos );
+            } else {
+                window.clearInterval( scrollToSection );
+            } */
+        }
+    }, 8);
+
+}
+
+
 
 
