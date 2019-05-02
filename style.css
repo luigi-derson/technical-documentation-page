@@ -1,0 +1,207 @@
+/** Global rules */
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+/* Medium Gray: #808080
+Navy Blue: #000080
+Aqua: #008080
+Green: #00ff00
+Orange: #ffa500
+Yellow: #ffff00 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    color: #000080;
+    background-color: #fff;
+    line-height: 1.5;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: #008080;
+}
+
+a:hover {
+    color: #ffa500;
+}
+
+/** Navbar container */
+
+#navbar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    font-weight: 700;
+    padding: 2em;
+    background-color: #ffff8d;
+    overflow: auto;
+}
+
+.python-logo {
+    max-width: 250px;
+}
+
+.nav-title {
+    font-size: 2em;
+    line-height: 1;
+    padding-bottom: 1.5rem;
+}
+
+#navbar ul {
+    font-size: 1em;
+    list-style-type: none;
+}
+
+#navbar ul li {
+    padding-bottom: 0.75rem;
+    font-size: 1.188em;
+}
+
+/** Main container */
+
+#main-doc {
+    margin-left: 310px;
+    padding: 2em;
+    word-wrap: break-word;
+    overflow: auto;
+    position: relative;
+}
+
+#main-doc ul {
+    list-style-type: none;
+    font-size: 1.250em;
+    padding-bottom: 1rem;
+    color: #f16100;
+}
+
+#main-doc ul li {
+    padding-left: 1em;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 0 0 1.25em 1.25em;
+    border-radius: 5px;
+    color: #008080;
+}
+
+header {
+    font-size: 1.750em;
+    font-weight: 700;
+    padding: 0.5rem 0 1.50rem 0;
+    color: #008080;
+}
+
+#main-doc p {
+    padding-bottom: 1rem;
+    font-size: 1.25em;
+}
+
+figure {
+    text-align: center;
+    margin: 0.5em 0 1.5em;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 120px;
+}
+
+#menu, #cross {
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 815px) {
+    #navbar {
+        position: fixed;
+        width: 100%;
+        height: 110px;
+        font-weight: 700;
+        padding: 1.75em;
+        background-color: #ffff8d;
+        overflow: hidden;
+        z-index: 1;
+        text-align: center;
+    }
+
+    #menu-links {
+        display: none;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1em;
+    }
+
+    #nav-title {
+        padding: 0;
+    }
+
+    .python-logo {
+        width: 50%;
+    }
+
+    #menu {
+        font-size: 2em;
+        padding-right: 1.5em;
+        display: unset;
+    }
+
+    #cross {
+        font-size: 2em;
+        padding-right: 1.5em;
+        display: none;
+    }
+
+    #main-doc {
+        margin-left: 0;
+        margin-top: 120px;
+        padding: 2em;
+        word-wrap: break-word;
+        overflow: auto;
+        position: absolute;
+    }
+
+    code {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #nav-title {
+        display: none;
+    }
+
+    .python-logo {
+        width: 70%;
+    }
+    
+}

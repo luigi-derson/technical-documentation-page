@@ -1,17 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
 <body>
+    <!-- Fixed navbar -->
+    <nav id="navbar">
+        <div class="title">
+            <i class="fas fa-times" id="cross"></i>
+            <i class="fas fa-bars" id="menu"></i>
+            <img class="python-logo" id="python-logo" src="https://www.python.org/static/community_logos/python-logo-generic.svg" alt="python logo">
+            <header class="nav-title" id="nav-title">Tutorial</header>
+        </div>
+        <ul id="menu-links">
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#why_learn">Why Learn Python?</a></li>
+            <li><a class="nav-link" href="#python_interpreter">Python interpreter</a></li>
+            <li><a class="nav-link" href="#run_python">Run Python code</a></li>
+            <li><a class="nav-link" href="#python_ide">Python IDE</a></li>
+            <li><a class="nav-link" href="#execute_python">Execute Python scripts</a></li>
+            <li><a class="nav-link" href="#variables">Variables</a></li>
+            <li><a class="nav-link" href="#data_types">Data types</a></li>
+            <li><a class="nav-link" href="#naming_variables">Naming variables</a></li>
+            <li><a class="nav-link" href="#strings">Strings</a></li>
+            <li><a class="nav-link" href="#if_statement">If statements</a></li>
+            <li><a class="nav-link" href="#for_loops">For loops</a></li>
+            <li><a class="nav-link" href="#while_loops">While loops</a></li>
+            <li><a class="nav-link" href="#functions">Functions</a></li>
+            <li><a class="nav-link" href="#lists">Lists</a></li>
+            <li><a class="nav-link" href="#dictionary">Dictionary</a></li>
+            <li><a class="nav-link" href="#class">Class</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+    <!-- Main content -->
     <main id="main-doc">
-        <h1>Python 3.7 Technical Documentation</h1>
-        <section class="main-section">
+        <!-- Start section template -->
+        <section class="main-section" id="introduction">
             <header>Introduction</header>
+
+            <p>Python is an <b>easy to learn</b>, powerful programming language. It has efficient high-level data structures and a simple but effective approach to <b>object-oriented programming</b>. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for <b>scripting</b> and <b>rapid application</b> development in many areas on most platforms.</p>
+
+            <p>This tutorial introduces the reader informally to <b>the basic concepts</b> and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.</p>
         </section>
+        <!-- end template -->
+
+        <section class="main-section" id="why_learn">
+            <header>Why Learn Python?</header>
+
+            <p>If you do much work on computers, eventually you find that there’s some task you’d like to automate. For example, you may wish to perform a search-and-replace over a large number of text files, or rename and rearrange a bunch of photo files in a complicated way. Perhaps you’d like to write a small custom database, or a specialized GUI application, or a simple game.</p>
+
+            <p>These are the <b>most common</b> applications:</p>
+
+            <ul>
+                <li>• Web Development</li>
+                <li>• Data Science — including machine learning, data analysis, and data visualization</li>
+                <li>• Scripting</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="python_interpreter">
+            <header>Python interpreter</header>
+
+            <p>To run Python programs, you will need the Python interpreter and possibly a graphical editor. A Python interpreter executes Python code (sometimes called programs).</p>
+
+            <figure>
+                <img src="https://pythonbasics.org/wp-content/uploads/2017/10/python.png" alt="python interpreter">
+            </figure>
+
+            <p>A program can be one or more Python files. Code files can include other files or modules. To run a program, you need to specify a parameter when executing Python.</p>
+        </section>
+
+        <section class="main-section" id="run_python">
+            <header>Run Python code</header>
+
+            <p>First you need to install Python interpreter. <a href="https://www.python.org/downloads/" target="_blank">Download Python 3.7</a></p>
+
+            <p>To test you succesfully installed python <b>open the console</b> type and enter:</p>
+
+            <code>> python --version</code>
+            
+            <p>This command should return the <b>version</b> you have installed.</p>
+        </section>
+
+        <section class="main-section" id="python_ide">
+            <header>Python IDE</header>
+
+            <p>An IDE is a development environment. If you don’t want to work from the terminal, you can use an IDE. This is a graphical editor in which you can type code, work with multiple files, run code amongst other things.</p>
+
+            <figure>
+                <img src="https://pythonbasics.org/wp-content/uploads/2017/10/ide.png" alt="pycharm IDE">
+            </figure>
+
+            <p>IDEs can save you a lot of development time, unless you are a terminal expert. You can quickly work with multiple files, switch between projects and work with multiple people on one project.</p>
+
+            <p>Some popular Python IDEs are <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>, <a href="http://www.pydev.org/" target="_blank">PyDev</a> and <a href="https://wingware.com/" target="_blank">Wing IDE</a>.</p>
+        </section>
+
+        <section class="main-section" id="execute_python">
+            <header>Execute Python scripts</header>
+
+            <p>Execute Python scripts in the terminal or an IDE. Python files have the .py extension. Whenever you make a Python script, save it as name.py</p>
+
+            <p>A simple program (hello.py) is shown below. Text below can be copied into a text editor and save as hello.py. Python works with files that end in .py.</p>
+
+            <code>> print('hello world')</code>
+
+            <p>To start the program, we have to open the command line and type:</p>
+
+            <code>> python hello.py <br>#Return hello world</code>
+        </section>
+
+        <section class="main-section" id="variables">
+            <header>Variables</header>
+
+            <p>Python supports different types of variables (datatypes):</p>
+
+            <ul>
+                <li>• Integers</li>
+                <li>• Floating-Point Numbers</li>
+                <li>• Complex numbers</li>
+                <li>• Strings</li>
+                <li>• Booleans</li>
+                <li>• Built-in functions</li>
+            </ul>
+
+            <p>You <b>do not need to specify</b> the datatype of a variable, you can simply assign any value to a variable.</p>
+        </section>
+
+        <section class="main-section" id="data_types">
+            <header>Data types</header>
+
+            <p>Python will determine the datatype based on the value you assign to the variable. If you create a variable x, x = 3, then Python assumes its an integer. But if you assign x = 1.5 then Python knows its not an integer but floating point number.</p>
+
+            <code>x = 3              # a whole number 
+                f = 3.1415926      # a floating point number     
+                name = "Python"    # a string
+
+                print(x)
+                print(f)
+                print(name)
+
+                combination = name + " " + name
+                print(combination)
+
+                sum = f + f
+                print(sum)</code>
+            <p>Run de program from terminal or with an IDE.</p>
+            <code>> python example.py</code>
+        </section>
+
+        <section class="main-section" id="naming_variables">
+            <header>Naming variables</header>
+
+            <p>A variable name must begin with a letter (upper or lower case) or an underscore. Variables cannot start with a number and are case sensitive.</p>
+
+            <p>If you create two variables x and X, they are different variables.</p>
+        </section>
+
+        <code>>>> x = 3
+            >>> X = 4
+            >>> print(x)
+            3
+            >>> print(X)
+            4</code>
+        
+        <p>By convention variables are often camel cased, meaning the first letter is small and the next words are all capital.</p>
+
+        <p>Some example variables that use camel casing</p>
+
+        <code>daysInYear = 365
+            daysInMonth = 30
+            numberFiles = 5</code>
+
+        <section class="main-section" id="strings">
+            <header>Strings</header>
+
+            <p>Any time you want to use text in Python, you are using strings. Python understands you want to use a string if you use the double-quotes symbol.</p>
+
+            <p>Once a string is created, you can simply print the string variable directly. You can access characters using block quotes.</p>
+
+            <code>>> x = "Hello"
+                >> print(x)
+                >> Hello</code>
+        </section>
+
+        <section class="main-section" id="if_statement">
+            <header>If statements</header>
+
+            <p>A program sometimes may have to make choices. These choices can execute different code depending on certain condition. In Python the <b>if statement</b> is used for conditional execution.</p>
+
+            <p>In the example below we show the use of if-statements.</p>
+
+            <code>gender = input("Gender? ")
+            if gender == "male" or gender == "Male":
+                print("Your cat is male")
+            else:
+                print("Your cat is female")
+
+            age = int(input("Age of your cat? "))
+            if age < 5:
+                print("Your cat is young.")
+            else:
+                print("Your cat is adult.")</code>
+        </section>
+
+        <section class="main-section" id="for_loops">
+            <header>For loops</header>
+
+            <p>Programs sometimes need to repeat actions. To repeat actions we can use a for loop. A for loop is written inside the code. A for loop can have 1 or more instructions.</p>
+
+            <p>A for loop will repeat a code block. Repeation is continued until the stop condition is met. If the stop condition is not met it will loop infintely.</p>
+
+            <p>These instructions (loop) is repeated until a condition is met.</p>
+
+            <p>Foor loop example below</p>
+
+            <code>city = ['Tokyo','New York','Toronto','Hong Kong']
+                print('Cities loop:')
+                for x in city:
+                    print('City: ' + x)
+                
+                print('\n')  # newline
+                
+                num = [1,2,3,4,5,6,7,8,9]
+                print('x^2 loop:')
+                for x in num:
+                    y = x * x
+                    print(str(x) + '*' + str(x) + '=' + str(y))</code>
+        </section>
+
+        <section class="main-section" id="while_loops">
+            <header>While loops</header>
+
+            <p>A while loop repeats code until the condition is met. Unlike for loops, the number of iterations in it may be unknown. A while loop always consists of a condition and a block of code.</p>
+
+            <p>A while loop ends if and only if the condition is true, in contrast to a for loop that always has a finite countable number of steps.</p>
+
+            <p>The while loop below defines the condition (x < 10) and repeats the instructions until that condition is true. Type this code:</p>
+
+            <code>x = 3                              
+                while x < 10:
+                    print(x)
+                    x = x + 1</code>
+
+            <p>Executes the code below until the condition x < 10 is met. Unlike a for loop, the iterator i is increased in the loop.</p>
+        </section>
+
+        <section class="main-section" id="functions">
+            <header>Functions</header>
+
+            <p>To group sets of code you can use functions. Functions are small parts of repeatable code. A function accepts parameters.</p>
+
+            <p>Without functions we only have a long list of instructions. Functions can help you organize code. Functions can also be reused, often they are included in modules.</p>
+
+            <p>Functions can be seen as executable code blocks. A function can be used once or more. A simple example of a function is:</p>
+
+            <code>def currentYear():
+                print('2018')
+            
+            currentYear()
+            >>> 2018</code>
+        </section>
+
+        <section class="main-section" id="lists">
+            <header>Lists</header>
+
+            <p>List can be seen as a collection: they can hold many variables. List resemble physical lists, they can contain a number of items.</p>
+
+            <p>A list can have any number of elements. They are similar to arrays in other programming languages. Lists can hold all kinds of variables:</p>
+
+            <ul>
+                <li>• Integers (whole numbers)</li>
+                <li>• Floats</li>
+                <li>• Characters</li>
+                <li>• Texts and many more</li>
+            </ul>
+
+            <p>Lets create an empty list. To define an empty list you should use brackets. Brackets is what tells Python that the object is a list.</p>
+
+            <code>list = []</code>
+
+            <p>Lists can hold both numbers and text. Regardless of contents, they are accessed in the same fashion. To access a list add the id between the brackets, such as list[0], list[1] and so on.</p>
+
+            <p>You can create numeric lists like this:</p>
+            <code>ratings = [ 3,4,6,3,4,6,5 ]</code>
+            <p>Lists can contain strings or characters:</p>
+            <code>ratings = [ 'A','A','B','A','C','A' ]
+            </code>
+            <p>To output simple print them:</p>
+            <code>print(ratings)
+            </code>
+        </section>
+
+        <section class="main-section" id="dictionary">
+            <header>Dictionary</header>
+
+            <p>Python dictionaries are another collection. Real word dictionaries are a good analogy to understand them: they contain a list of items, each item has a key and a value.</p>
+
+            <p>In the traditional dictionary, the key is the word and the value is the explanation or description of it. In Python you can do something similar</p>
+
+            <p>In a more strict way of speaking (mathematical), a dictionary is a one-to-one mapping. For every key in the dictionary there is a value. This value is assigned to the key. <b>Dictionary</b>: a set which contains (key, value) pairs</p>
+
+            <figure>
+                <img src="https://pythonbasics.org/wp-content/uploads/2018/02/dictionary.png" alt="dictionary python">
+            </figure>
+
+            <p>Lets type some code! You can create a dictionary with a one liner. A dictionary is defined with these brackets {}.</p>
+
+            <code>words = {}
+            </code>
+
+            <p>Then you can create a mapping. A mapping is defined as a key,value pair. First define the key then the value:</p>
+
+            <code>words[key] = value
+            </code>
+
+            <p>In the example below we define some key,value pairs and then print them using their unique keys. Type the code below, save it and run it:</p>
+
+            <code>words = {}
+                words["BMP"] = "Bitmap"
+                words["BTW"] = "By The Way"
+                words["BRB"] = "Be Right Back"
+                
+                print words["BMP"]
+                print words["BRB"]</code>
+        </section>
+
+        <section class="main-section" id="class">
+            <header>Class</header>
+
+            <p>Python class is concept of “object oriented programming”. Python is an <b>object oriented</b> programming language (oop). OOP is a way to build software.</p>
+
+            <p>With OOP you can make your program much more organized, scalable, reusable and extensible. The OOP concept can be a bit weird. It can be challenging to grasp, but it’s a very powerful concept.</p>
+
+            <p>In Python, you can define objects. An object is a collection of methods and variables. Objects live somewhere in the computers memory. They can be manipulated at runtime. Lets create a theoritcal example, we create an object dog. Creating an object is just one line of code:</p>
+
+            <code>obj1 = dog()</code>
+
+            <p>Each object can have variables. The values of those variables are unique to the object. We set object variables (name,age</p>
+
+            <code>obj1.name = "Woof"
+                    obj1.age = 5</code>
+
+            <p>Objects are always created from classes. A class define each method and variable that exists within the object. You could see classes as blueprints for objects.</p>
+
+            <p>The object had variables (age,name) and a method (bark). they are defined in the class dog. This is how that class is defined:</p>
+
+            <code>class dog:
+                    name = ""
+                    age = 0
+                
+                    def bark(self):
+                        print('Bark')</code>
+
+            <p>First we define the class itself: class dog. Then the variables are defined (name,dog). Finally we define the method. If you look closely you’ll see the method has the word self in it. The word <b>self</b> refers to the object (You can create several objects from a class.)</p>
+            
+            <figure>
+                <img src="https://pythonbasics.org/wp-content/uploads/2018/02/classes.png" alt="class python">
+            </figure>
+
+        </section>
+
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+
+            <p>All the documentation in this page is taken from <a href="https://pythonbasics.org/">Python basics</a> and <a href="https://docs.python.org/3/tutorial/index.html">Python official page</a></p>
+        </section>
+
+        <footer>
+            Luigi Derson &copy; 2019
+        </footer>
     </main>
+<script src="./app.js"></script>
 </body>
+
 </html>
